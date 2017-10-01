@@ -8,9 +8,9 @@ Google Maket Stock Prediction using RNN "Keras+Tensorflow"
 <img src="1step.png" alt="prediction on the test set" style="width:304px;height:228px;">
 
 
-## Python 2.7 + conda 
-Install Conda https://conda.io/docs/installation.html
-Cheatsheet https://conda.io/docs/_downloads/conda-cheatsheet.pdf
+## Python 2.7 + conda    
+Install Conda https://conda.io/docs/installation.html .   
+Cheatsheet https://conda.io/docs/_downloads/conda-cheatsheet.pdf .   
 
 conda create -n tensorflow-p2 python=2.7
 source activate tensorflow-p2
