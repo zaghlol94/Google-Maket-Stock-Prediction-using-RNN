@@ -8,7 +8,7 @@ Created on Wed Sep 20 19:21:50 2017
 #import lib and data
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd 
+import pandas as pd
 
 training_set=pd.read_csv('Google_Stock_Price_Train.csv')
 training_set=training_set.iloc[:,1:2].values
@@ -36,7 +36,7 @@ reg.add(Dense(units=1))
 
 reg.compile(optimizer='adam',loss='mean_squared_error')
 
-reg.fit(Xtrain,Ytrain,batch_size=32,epochs=200)
+reg.fit(Xtrain,Ytrain,batch_size=32,epochs=2000)
 
 test_set=pd.read_csv('Google_Stock_Price_Test.csv')
 real_stock_price=test_set.iloc[:,1:2].values
@@ -61,7 +61,7 @@ plt.show()
 #getting the real stock price
 RST=pd.read_csv('Google_Stock_Price_Train.csv')
 RST=RST.iloc[:,1:2].values
-#predicted stock price 
+#predicted stock price
 predict_stock_price_train=reg.predict(Xtrain)
 predict_stock_price_train=sc.inverse_transform(predict_stock_price_train)
 
@@ -75,7 +75,7 @@ plt.show()
 
 #evaluate RNN
 import math
-from sklearn.metrics import mean_squared_error 
+from sklearn.metrics import mean_squared_error
 rmse=math.sqrt(mean_squared_error(real_stock_price,predicted))
 error=rmse/800 #mean error devided by the avg
 
